@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>残月引导页</title>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="https://cdn.staticfile.org/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <section class="content">
+        <div class="box">
+            <!-- QQ头像 -->
+            <img src="https://q2.qlogo.cn/headimg_dl?dst_uin=1771245847&amp;spec=100" alt="1771245847">
+            <!-- 名称 -->
+            <h2>残月引导页</h2>
+            <!-- 售后 -->
+            <div class="as">
+                <p>个人主页</p>
+                <p></p>
+                <p></p>
+            </div>
+            <!-- 超链接 -->
+            <ul class="site">
+                <li><a href="#" target="_blank" rel="noopener noreferrer">待添加</a></li>
+                <li><a href="#" target="_blank" rel="noopener noreferrer">待添加</a></li>
+                <li><a href="#" target="_blank" rel="noopener noreferrer">待添加</a></li>
+            </ul>
+            <center><a target="_blank" href="https://beian.miit.gov.cn/"></a>鲁ICP备2023号</a>
+</li>
+</p>本网站已运行:<span id="run_time" style="color:#0ef395"></span>
+            </center>
+            <script>
+                function runTime() {
+                    var d = new Date(), str = '';
+                    BIrthDay = new Date("november 01,2023");
+                    today = new Date();
+                    timeold = (today.getTime() - BIrthDay.getTime());
+                    sectimeold = timeold / 1000
+                    secondsold = Math.floor(sectimeold);
+                    msPerDay = 24 * 60 * 60 * 1000
+                    msPerYear = 365 * 24 * 60 * 60 * 1000
+                    e_daysold = timeold / msPerDay
+                    e_yearsold = timeold / msPerYear
+                    daysold = Math.floor(e_daysold);
+                    yearsold = Math.floor(e_yearsold);
+                    //str = yearsold + "年";
+                    str += daysold + "天";
+                    str += d.getHours() + '时';
+                    str += d.getMinutes() + '分';
+                    str += d.getSeconds() + '秒';
+                    return str;
+                }
+                setInterval(function () { $('#run_time').html(runTime()) }, 1000);
+            </script>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+        </div>
+    </section>
+    <script src="/js/flexible.js"></script>
+    <!-- 音乐播放器代码 -->
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script id="xplayer" src="https://music.piphp.com/Static/player/player.js" key="60411033e9c3c" m="1"></script>
+</body>
+
+</html>
