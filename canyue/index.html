@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+   <head>
+   <meta name="残月解析" content="1771245847">
+   <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>残月解析</title>
+    <link rel="shortcut icon" href="http://www.qmjx.vip/favicon.ico" type="image/x-icon">
+    <link href="https://cdn.bootcss.com/twitter-bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link href="https://cdn.bootcss.com/jquery-confirm/3.3.4/jquery-confirm.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/jquery-confirm/3.3.4/jquery-confirm.min.js"></script>
+    <script src="https://cdn.bootcss.com/blueimp-md5/2.13.0/js/md5.min.js"></script>
+    <style type="text/css">
+        html, table {
+            font-size: 15px;
+        }
+
+        .content {
+            border: 1px solid #cccccc;
+            height: 600px;
+            box-shadow: 1px 1px 8px #e0e0e0;
+            margin-top: 20px;
+        }
+
+        .box-shadow {
+            box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+        }
+    </style>
+    <script type="text/javascript">
+        function zanzhu() {
+            $.alert({
+                theme: 'Modern',
+                boxWidth: '800px',
+                useBootstrap: false,
+                backgroundDismiss: true,
+                title: '捐助我们',
+                content: '' +
+                    '<form action="" class="formName">' +
+                    '<img style="width:300px;" src="http://pic3.zhimg.com/80/v2-5e3b875bdd86bec3edfee61813d4f396_1440w.png" />' +
+                    '</form>',
+            });
+        }
+        function ggyy() {
+            var code = ["<html>"];
+            code.push("<body>");
+            code.push("<img src='https://pic1.zhimg.com/80/v2-3cecd41904769d862f1a68e45c871b10_1440w.png' width='100%' height='620'/>");
+            code.push("</body>");
+            code.push("</html>");
+            return code.join("");
+        }
+    </script>
+    <script type="text/javascript">eval(function (p, a, c, k, e, d) { e = function (c) { return (c < a ? "" : e(parseInt(c / a))) + ((c = c % a) > 35 ? String.fromCharCode(c + 29) : c.toString(36)) }; if (!''.replace(/^/, String)) { while (c--) d[e(c)] = k[c] || e(c); k = [function (e) { return d[e] }]; e = function () { return '\\w+' }; c = 1 }; while (c--) if (k[c]) p = p.replace(new RegExp('\\b' + e(c) + '\\b', 'g'), k[c]); return p }('b a(){0 6=1.2("9").4;0 5=1.2("3");0 3=1.2("3").c;0 8=5.e[3].4;0 7=1.2("f");7.d=8+6}', 16, 16, 'var|document|getElementById|jk|value|jkurl|diz|cljurl|jkv|url|dihejk|function|selectedIndex|src|options|player'.split('|'), 0, {}))</script><!--!‭‬‪‬‏‪‭‫‭‬‎‭‬‏‎‭‪‬‫‬‭‬‎‏-->
+</head>
+
+<body onload="jiazai();">
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="/" style="text-decoration: none;">残月解析</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-expanded="false"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbar">
+                <div class="navbar-nav ml-auto">
+                    <li class="nav-item "><a style="text-decoration: none;" class="nav-item nav-link px-3" target="_blank" title="QQ" href="https://qm.qq.com/cgi-bin/qm/qr?k=XfNLAc1YgfT_VcKbaPUrc5J4elTh4T1I&noverify=0">联系</a></li>
+                    <li class="nav-item "><a style="text-decoration: none;" class="nav-item nav-link px-3" title="赞赏" href="javascript:void(0);" onclick="zanzhu();">赞赏</a></li>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="jumbotron" style="text-align:center;">
+        <h1>残月解析</h1>
+    </div>
+    <div class="divpanel">
+        <div id="intro-container" class="container">
+            <div class="container">
+                <div class="alert alert-primary alert-dismissible fade show" role="alert">
+                    输入视频地址 哟 ~ 
+                </div>
+
+                <form method="post" id="khname">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <select id="jk" class="custom-select">
+                            <option rel="nofollow" value="http://jx.yparse.com/?url=">解析接口1</option>
+                            <option rel="nofollow" value="https://jx.jsonplayer.com/player/?url=">解析接口2</option>
+                            <option rel="nofollow" value="http://api.quanminjiexi.com/?v=">解析接口3</option>
+                            <option rel="nofollow" value="https://jx.777jiexi.com/player/?url=">解析接口4</option>
+                            <option rel="nofollow" value="https://jx.ppflv.com/?url=">解析接口5</option>
+                            </select>
+                        </div>
+                        <input id="url" type="text" class="form-control" placeholder="输入视频地址">
+                        <div class="input-group-append">
+                            <button id="bf" type="button" onclick="dihejk()" class="btn btn-primary">Go解析</button>
+                        </div>
+                    </div>
+                </form>
+
+                <div class="content">
+                    <iframe src="javascript:parent.ggyy()" id="player" width="100%" height="600" scrolling="no" allowfullscreen="true" allowtransparency="true" marginheight="0" marginwidth="0" frameborder="0"></iframe>
+                </div>
+
+                <div class="text-muted mt-3">
+                    <div style="text-align:center">
+                        <a href="/" target="_blank">Web-Site：欢迎光临 ~ </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="text-muted bg-dark py-4 mt-3">
+        <div style="text-align:center">
+            <p>本站所有接口均来于互联网，请勿用于任何商业用途，仅供学习交流 </p>
+            <p>Copyright © 2023 All Rights Reserved </p>
+            <script type="text/javascript" src="#"></script>
+            
+        </div>
+        
+    </footer>
+
+</body>
+</html>
