@@ -7,7 +7,7 @@
 body {
   font-family: "微软雅黑", sans-serif;
   /* 这里修改背景图 */
-  background: url(https://api.xlnet8.com/api/bing) no-repeat center;
+  background: url(../img/bg.jpg) no-repeat center;
   background-size: cover;
   -webkit-background-attachment: fixed;
   background-attachment: fixed;
