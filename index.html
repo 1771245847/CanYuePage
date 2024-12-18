@@ -2,17 +2,17 @@
 <html lang="zh-CN">
 
 <head>
-    <meta charset="UTF-8">
-    <title>残月引导页</title>
-    <meta name="keywords" content="残月引导页，残月个人引导页"/>
-    <meta name="description"content="残月引导页，残月引导主页，残月个人引导页，个人主页，个人引导页">
-    <meta name="author"content="1771245847">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="/css/normalize.css">
-    <link rel="stylesheet" href="/css/style.css">
-    <script src="https://cdn.staticfile.org/jquery/3.5.1/jquery.min.js"></script>
+<meta charset="UTF-8">
+<title>残月引导页</title>
+<meta name="keywords" content="残月引导页，残月个人引导页"/>
+<meta name="description"content="残月引导页，残月引导主页，残月个人引导页，个人主页，个人引导页">
+<meta name="author"content="1771245847">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="css/normalize.css">
+<link rel="stylesheet" href="css/style.css">
+<script src="https://cdn.staticfile.org/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -28,50 +28,82 @@
                 <p></p>
                 <p></p>
             </div>
-            <!-- 超链接 -->
+            <!-- 链接 -->
             <ul class="site">
                 <li><a href="https://canyue.freetzi.com" target="_blank" rel="noopener noreferrer">残月解析</a></li>
-                <li><a href="https://github.com/1771245847" target="_blank" rel="noopener noreferrer">github</a></li>
+                <li><a href="https://canyue5.wordpress.com" target="_blank" rel="noopener noreferrer">残月博客</a></li>
                 <li><a href="https://qm.qq.com/cgi-bin/qm/qr?k=XfNLAc1YgfT_VcKbaPUrc5J4elTh4T1I&noverify=0" target="_blank" rel="noopener noreferrer">联系</a></li>
             </ul>
-            <center><a target="_blank" href="https://beian.miit.gov.cn/"></a>Copyright © 2023 All Rights Reserved</a>
+            <center><a target="_blank" href="https://beian.miit.gov.cn/"></a>Copyright © 2025 All Rights Reserved</a>
 </li>
-</p>本网站已运行: <span id="run_time" style="color:#0ef395"></span>
-            </center>
-            <script>
-                function runTime() {
-                    var d = new Date(), str = '';
-                    BIrthDay = new Date("01,01,2024");
-                    today = new Date();
-                    timeold = (today.getTime() - BIrthDay.getTime());
-                    sectimeold = timeold / 1000
-                    secondsold = Math.floor(sectimeold);
-                    msPerDay = 24 * 60 * 60 * 1000
-                    msPerYear = 365 * 24 * 60 * 60 * 1000
-                    e_daysold = timeold / msPerDay
-                    e_yearsold = timeold / msPerYear
-                    daysold = Math.floor(e_daysold);
-                    yearsold = Math.floor(e_yearsold);
-                    //str = yearsold + "年";
-                    str += daysold + "天";
-                    str += d.getHours() + '时';
-                    str += d.getMinutes() + '分';
-                    str += d.getSeconds() + '秒';
-                    return str;
-                }
-                setInterval(function () { $('#run_time').html(runTime()) }, 1000);
-            </script>
-             </a>
-             </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
-    </div>
-    </section>
-    <script src="/js/flexible.js"></script>
-    <!-- 音乐播放器代码 -->
+<center>
+<p>本网站已运行: <span id="run_time" style="color:#0ef395"></span> </p>
+</center>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    function runTime() {
+        var today = new Date();
+        var birthDay = new Date(2024, 0, 1); // 使用数字参数创建 Date 对象，注意月份从0开始
+        var timeDiff = today.getTime() - birthDay.getTime();
+
+        var secondsInDay = 24 * 60 * 60;
+        var secondsInYear = 365.25 * secondsInDay; // 考虑闰年，使用365.25天作为一年的平均天数
+
+        var yearsDiff = Math.floor(timeDiff / (secondsInYear * 1000));
+        var remainingMs = timeDiff % (secondsInYear * 1000);
+        var daysDiff = Math.floor(remainingMs / (secondsInDay * 1000));
+        remainingMs %= (secondsInDay * 1000);
+        var hoursDiff = Math.floor(remainingMs / (60 * 60 * 1000));
+        var minutesDiff = Math.floor((remainingMs % (60 * 60 * 1000)) / (60 * 1000));
+        var secondsDiff = Math.floor((remainingMs % (60 * 1000)) / 1000);
+
+        return yearsDiff + "年 " + daysDiff + "天 " +
+               hoursDiff + "时 " + minutesDiff + "分 " + secondsDiff + "秒";
+    }
+
+    setInterval(function() { $('#run_time').html(runTime()) }, 1000);
+</script>
+
+<!-- 
+<p><span id="span"></span></p>
+<script type="text/javascript">
+    function runtime() {
+        // 初始时间，日/月/年 时:分:秒
+        // 注意：这里使用的是MM/DD/YYYY格式
+        var X = new Date("01/01/2023 00:00:00");
+        var Y = new Date();
+        
+        // 计算时间差（毫秒）
+        var T = Y - X; // 也可以写作 Y.getTime() - X.getTime()，但直接相减也是可以的，因为Date对象在减法时会隐式调用.getTime()
+        
+        // 将毫秒转换为天、小时、分钟和秒
+        var days = Math.floor(T / (24 * 60 * 60 * 1000));
+        var hours = Math.floor((T % (24 * 60 * 60 * 1000)) / (60 * 60 * 1000));
+        var minutes = Math.floor((T % (60 * 60 * 1000)) / (60 * 1000));
+        var seconds = Math.floor((T % (60 * 1000)) / 1000);
+        // 字体颜色为绿色
+        var spanElem = document.getElementById('span');
+        // 虽然您有一个<span id="run_time"></span>，但您似乎在脚本中并未使用它
+        // 如果您想用它，可以将下面的innerHTML赋值也给它，或者替换掉当前的span使用
+        spanElem.innerHTML = "本网站已运行: " + days + "天" + hours + "小时" + minutes + "分" + seconds + "秒";
+        spanElem.style.color = "green";
+    }
+    
+    // 设置定时器，每秒更新一次时间显示
+    setInterval(runtime, 1000);
+</script>
+
+ -->
+</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+</section>
+<script src="js/flexible.js"></script>
+<!-- 音乐播放器代码 -->
 </script>
 <div class="container">
 <audio id='audio' src="https://env-00jxga0351nf-static.normal.cloudstatic.cn/Music/TikTok.mp3"></audio>
@@ -84,5 +116,6 @@ function musicAutoPlay(){
 }
 setInterval("musicAutoPlay()", 10);//必须使用一个时间函数 ，不触发的情况下还是报错//
 </script>
+
 </body>
 </html>
